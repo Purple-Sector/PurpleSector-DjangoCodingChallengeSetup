@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "purplesector-djangocodingchallenge"
+version = "0.0.1"
+description = ""
+authors = []
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Django = "^5.0.7"
+djangorestframework = "^3.15.2"
+daphne = "^4.1.2"
+channels = "^4.1.0"
+django-cors-headers = "^4.4.0"
+django-environ = "^0.11.2"
+django-extensions = "^3.2.3"
+django-filter = "^24.2"
+psycopg = "^3.2.1"
+whitenoise = "^6.7.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+pytest = "^8.3.1"
+pytest-django = "^4.8.0"
+coverage = "^7.6.0"
+debugpy = "^1.8.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
