@@ -7,7 +7,7 @@ python manage.py collectstatic --noinput
 python manage.py migrate
 
 # run server
-# python manage.py runserver 0:80
+python manage.py runserver 0:80
 
 # run server with debug
-python -m debugpy --listen 0.0.0.0:5678 manage.py runserver 0.0.0.0:80
+# python -m debugpy --listen 0.0.0.0:5678 manage.py runserver 0.0.0.0:80

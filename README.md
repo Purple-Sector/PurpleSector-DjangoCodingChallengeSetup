@@ -20,19 +20,20 @@ Make sure the following are installed on your system prior to running the projec
 * [Docker](https://docs.docker.com/engine/install/)
 * [Poetry](https://python-poetry.org/docs/#installing-with-the-official-installer)
 
-### Build docker image
+### Run the API
 Create a `.env` file using `.env.dist` as a template.
 
-
 ```bash
-docker build . -t <image-name>
+cd .dev
+docker-compose up --build
 ```
+The API is available at `http://localhost:8000`.
 
-### Run the docker image
+## Clean-up
+To remove all images and volumes created by docker-compose
 ```bash
-docker run --rm -it -p 8000:80 <image-name>
+docker-compose down -v --rmi all
 ```
-
 
 # Technical Challenge - What do I need to do?
 The questions and instructions for the technical challenge will be provided to you during the interview.
