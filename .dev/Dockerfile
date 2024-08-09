@@ -1,5 +1,5 @@
 # pull official base image
-FROM python:3.11.4-slim-buster
+FROM python:3.11-slim-bullseye
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -21,7 +21,7 @@ RUN pip install poetry poetry-plugin-export
 # copy dependencies
 COPY pyproject.toml /app/
 COPY poetry.lock /app/
-COPY .dev /app
+COPY .dev /app/
 
 # install dependencies
 RUN poetry export --without-hashes --with dev -f requirements.txt -o /tmp/requirements.txt
